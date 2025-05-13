@@ -9,7 +9,7 @@ export default function Index() {
 
     function  navigate(){
         
-        router.replace('/home') //navegar para outra de tela (a raiz index) pelo button
+        router.replace('/categories') //navegar para outra de tela (a raiz index) pelo button
     }
     return (
         <SafeAreaView style={styles.container} >

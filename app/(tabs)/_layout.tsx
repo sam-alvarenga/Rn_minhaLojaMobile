@@ -10,6 +10,9 @@ export default function TabLayout() {
 
 
             />
+           <Tabs.Screen
+                name="categories" options={{ title: "Categorias",headerShown:false, tabBarIcon: ({ color }) => <FontAwesome size={28} name="archive" color={color} /> }}
+            />
         </Tabs>
     )
 
