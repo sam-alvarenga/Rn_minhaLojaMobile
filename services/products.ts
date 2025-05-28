@@ -4,7 +4,7 @@
 
 import {data} from "../data/index";
 
-export function getAllProdutcts(){
+export function getAllProducts(){
 
     return data.products;
 
