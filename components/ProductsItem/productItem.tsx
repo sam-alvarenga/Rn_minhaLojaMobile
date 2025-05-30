@@ -1,24 +1,29 @@
-import { Pressable, Image, Text, View, StyleSheet } from "react-native";
+import { Pressable, Image, Text, View, StyleSheet, } from "react-native";
 import { Product } from "../../types/product";
+import { Link } from "expo-router";
+
 
 type Props = {
-    products: Product
+    product: Product
 }
 
 
-export default function ProductItem({ products }: Props) {
+export default function ProductItem({ product }: Props) {
     return (
-        <View style={styles.container}>
+
+        <Link href={`/product/ ${product.id}`} style={styles.container} asChild>
+
             <Pressable style={styles.containerProduct}>
-                <Image resizeMode="cover" style={styles.img} source={{ uri: products.image }} />
+                <Image resizeMode="cover" style={styles.img} source={{ uri: product.image }} />
                 <View style={styles.products}>
-                    <Text style={styles.title}>{products.title}</Text>
-                    <Text style={styles.description}>{products.description}</Text>
-                    <Text style={styles.preco}>{products.price}</Text>
+                    <Text style={[styles.title, styles.destaque]}>{product.title}</Text>
+                    <Text style={styles.description}>{product.description}</Text>
+                    <Text style={[styles.preco, styles.destaque]}>R${product.price}</Text>
                 </View>
 
             </Pressable>
-        </View>
+
+        </Link>
 
     );
 
@@ -30,9 +35,9 @@ const styles = StyleSheet.create({
         marginHorizontal: 15,
         justifyContent: 'center',
         alignItems: 'center',
-        
+
     },
-    
+
     containerProduct: {
         width: '100%',
         flexDirection: 'row',
@@ -56,24 +61,27 @@ const styles = StyleSheet.create({
 
     title: {
         fontSize: 20,
-        color: '#E67A31',
-        fontWeight: 'bold'
+
+
     },
 
     description: {
-       fontSize: 14,
-       color: '#333'
-       
+        fontSize: 14,
+        color: '#333'
+
 
     },
 
     preco: {
         fontSize: 15,
-        color: '#E67A31',
         fontWeight: 'bold',
         textAlign: 'right'
-    }
+    },
 
+    destaque: {
+        fontWeight: 'bold',
+        color: '#E67A31',
+    }
 
 
 });
