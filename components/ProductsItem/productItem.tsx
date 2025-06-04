@@ -18,7 +18,7 @@ export default function ProductItem({ product }: Props) {
                 <View style={styles.products}>
                     <Text style={[styles.title, styles.destaque]}>{product.title}</Text>
                     <Text style={styles.description}>{product.description}</Text>
-                    <Text style={[styles.preco, styles.destaque]}>R${product.price}</Text>
+                    <Text style={[styles.preco, styles.destaque]}>R${product.price.toFixed(2)}</Text>
                 </View>
 
             </Pressable>

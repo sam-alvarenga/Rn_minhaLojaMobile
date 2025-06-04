@@ -7,7 +7,7 @@ import { getAllCatergories } from "../../../services/category";
 
 
 
-
+//trazendo todas as categorias dos produtos
 export default function categories() {
 
      const categories = getAllCatergories(); 
