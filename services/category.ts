@@ -8,7 +8,7 @@ export const getAllCatergories = () =>{
     return data.categories;
 }
 
-export const getCategoryByById =(pId:number) => {
+export const getCategoryById =(pId:number) => {
     return data.categories.find(item  => item.id === pId);
 
 }

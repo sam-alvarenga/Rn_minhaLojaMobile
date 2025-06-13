@@ -1,5 +1,5 @@
 import { View, FlatList } from "react-native";
-import ProductItem from "../../components/ProductsItem/productItem";
+import ProductItem from "../../components/ProductItem/ProductItem";
 import { getAllProducts } from "../../services/products";
 
 export default function Home() {
