@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, FlatList } from "react-native";
-import CategoriesItem from "../../../components/CategoryItem/categoriesitem"; 
-import { getAllCatergories } from "../../../services/category"; 
+import CategoriesItem from "../../../components/CategoryItem/categoriesitem";
+import { getAllCatergories } from "../../../services/category";
 
 
 
@@ -10,8 +10,8 @@ import { getAllCatergories } from "../../../services/category";
 //trazendo todas as categorias dos produtos
 export default function categories() {
 
-     const categories = getAllCatergories(); 
-    
+    const categories = getAllCatergories();
+
     return (
 
         <View>
