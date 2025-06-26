@@ -15,7 +15,7 @@ export default function TabLayout() {
             />
 
             <Tabs.Screen
-                name="about" options={{title: "Quem Somos", headerShown: false, tabBarIcon: ({color}) => <FontAwesome size={28} name="info" color={color} />}}
+                name="about" options={{title: "Sobre Nós", headerShown: false, tabBarIcon: ({color}) => <FontAwesome size={28} name="info" color={color} />}}
             />
         </Tabs>
     )
