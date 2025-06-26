@@ -1,52 +1,14 @@
 import { View, Text, Image, StyleSheet } from "react-native";
 import React from "react";
-
+import Branches from "./../../../components/Branches/branches";
+import LojaRj from './../../../assets/lojaRj.jpg';
 
 
 export default function aboutRj() {
-
     return (
-        <View style={styles.containerRj}>
-            <Image
-                source={require('./../../../assets/LojaRj1.png')}
-                style={styles.ImgRj}
-                resizeMode='cover'
-            />
-            <Text style={styles.branchRj}>Filial - Rio de janeiro</Text>
-            <Text style={styles.description}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit aliquam deserunt officia quae assumenda quidem beatae libero corporis architecto delectus error quis voluptatem saepe, facilis animi aliquid, optio nam minima!</Text>
-        </View>
-
-
+        <Branches image={LojaRj} city="Filial - Rio de Janeiro" description="Localizada no coração do Rio, nossa filial oferece uma variedade de produtos modernos. Aqui você encontra acessórios como sapatos, bolsas e chapéus, além de uma ampla linha de eletrônicos e outros itens que combinam com seu dia a dia." localization={"JukasStores Rio de Janeiro (Zona Sul): Rua Marquês de Abrantes, 000 - Flamengo"}></Branches>
     );
-
 }
 
-const styles = StyleSheet.create({
 
-    containerRj: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        gap: 25
-    },
-
-    ImgRj: {
-        width: 200,
-        height: 200
-    },
-
-    branchRj: {
-        color: '#F05B66',
-        fontSize: 20,
-        fontWeight: 'bold',
-    },
-
-    description: {
-        paddingHorizontal: 20
-    },
-
-
-
-
-});
 
